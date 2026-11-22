@@ -1,0 +1,30 @@
+ufficiale.",shopBtn:"Vai allo
+shop",partner:"Per i partner",partnerText:"Vuoi costruire qualcosa
+insieme ad altre persone? Scopri l'opportunità di diventare
+partner.",teamBtn:"Diventa partner",values:"I nostri
+valori",valuesText:"Fiducia, onestà, comunità e una visione a lungo
+termine sono al centro del nostro progetto.",footerText:"Costruiamo
+insieme il futuro."},
+en:{tagline:"Growing together. Discovering new
+opportunities.",welcome:"Welcome to Global Vision",intro:"Discover new
+perspectives on wellbeing, personal development and growing
+together.",options:"Your opportunities",customer:"For
+customers",customerText:"Explore the product range and shop
+conveniently through the official online store.",shopBtn:"Visit the
+shop",partner:"For team partners",partnerText:"Would you like to build
+something together with others? Learn more about the team partnership
+opportunity.",teamBtn:"Become a partner",values:"Our
+values",valuesText:"Trust, honesty, community and a long-term
+perspective are at the heart of our vision.",footerText:"Building the
+future together."}
+};
+function setLang(lang,button){
+document.documentElement.lang=lang;
+Object.entries(translations[lang]).forEach(([id,value])=>{document.getElementById(id).textContent=value});
+document.querySelectorAll("nav
+button").forEach(b=>b.classList.remove("active"));
+button.classList.add("active");
+}
+</script>
+</body>
+</html>
