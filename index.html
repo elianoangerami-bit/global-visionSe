@@ -1,30 +1,71 @@
-ufficiale.",shopBtn:"Vai allo
-shop",partner:"Per i partner",partnerText:"Vuoi costruire qualcosa
-insieme ad altre persone? Scopri l'opportunità di diventare
-partner.",teamBtn:"Diventa partner",values:"I nostri
-valori",valuesText:"Fiducia, onestà, comunità e una visione a lungo
-termine sono al centro del nostro progetto.",footerText:"Costruiamo
-insieme il futuro."},
-en:{tagline:"Growing together. Discovering new
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="UTF-8"><meta name="viewport"
+content="width=device-width,initial-scale=1"><title>Global
+Vision</title>
+<style>*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f8faf5;color:#21432c}header{background:#174c35;color:white;padding:24px;text-align:center}h1{font-size:2.5rem;margin:10px}nav{margin:15px}nav
+button{background:transparent;color:white;border:1px solid
+#d6b66c;padding:10px
+16px;border-radius:20px;margin:4px;cursor:pointer}.hero{text-align:center;padding:70px
+20px;background:linear-gradient(135deg,#e4f1df,#fff9e9)}h2{color:#174c35;font-size:2rem}.gold{color:#9d782c}.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:30px}.card{background:white;padding:32px;border-radius:18px;box-shadow:0
+4px 20px #0001;max-width:390px;flex:1 1
+280px;text-align:center}.btn{display:inline-block;background:#216a48;color:white;text-decoration:none;padding:14px
+24px;border-radius:30px;margin-top:12px}.values{text-align:center;padding:40px
+20px}footer{background:#174c35;color:white;text-align:center;padding:28px}</style></head>
+<body><header><h1>GLOBAL VISION</h1><div id="tagline">Gemeinsam
+wachsen. Neue Möglichkeiten entdecken.</div><nav><button
+onclick="setLang('de')">Deutsch</button><button
+onclick="setLang('it')">Italiano</button><button
+onclick="setLang('en')">English</button></nav></header><main><section
+class="hero"><h2 id="welcome">Willkommen bei Global Vision</h2><p
+id="intro">Entdecke neue Perspektiven für Wohlbefinden, persönliche
+Entwicklung und gemeinsames Wachstum.</p></section><section
+class="cards"><article class="card"><h2 id="customer">Für
+Kunden</h2><p id="customerText">Entdecke das Sortiment und kaufe
+bequem im offiziellen Onlineshop ein.</p><a class="btn" id="shopBtn"
+href="https://www.fitline.com/?sponsor=22457396" target="_blank"
+rel="noopener noreferrer">Zum Shop</a></article><article
+class="card"><h2 id="partner">Für Teampartner</h2><p
+id="partnerText">Möchtest du gemeinsam mit anderen etwas aufbauen?
+Entdecke die Möglichkeit einer Teampartnerschaft.</p><a class="btn"
+id="teamBtn" href="https://registration.pm-international.com/?TP=22457396"
+target="_blank" rel="noopener noreferrer">Partner
+werden</a></article></section><section class="values"><h2 class="gold"
+id="values">Unsere Werte</h2><p id="valuesText">Vertrauen,
+Ehrlichkeit, Gemeinschaft und eine langfristige Perspektive stehen im
+Mittelpunkt.</p></section></main><footer id="footerText">Gemeinsam
+Zukunft gestalten.</footer>
+<script>const translations={de:{tagline:"Gemeinsam wachsen. Neue
+Möglichkeiten entdecken.",welcome:"Willkommen bei Global
+Vision",intro:"Entdecke neue Perspektiven für Wohlbefinden,
+persönliche Entwicklung und gemeinsames Wachstum.",customer:"Für
+Kunden",customerText:"Entdecke das Sortiment und kaufe bequem im
+offiziellen Onlineshop ein.",shopBtn:"Zum Shop",partner:"Für
+Teampartner",partnerText:"Möchtest du gemeinsam mit anderen etwas
+aufbauen? Entdecke die Möglichkeit einer
+Teampartnerschaft.",teamBtn:"Partner werden",values:"Unsere
+Werte",valuesText:"Vertrauen, Ehrlichkeit, Gemeinschaft und eine
+langfristige Perspektive stehen im Mittelpunkt.",footerText:"Gemeinsam
+Zukunft gestalten."},it:{tagline:"Crescere insieme. Scoprire nuove
+opportunità.",welcome:"Benvenuti in Global Vision",intro:"Scopri nuove
+prospettive per il benessere, la crescita personale e la
+collaborazione.",customer:"Per i clienti",customerText:"Scopri la
+gamma di prodotti e acquista comodamente nello shop online
+ufficiale.",shopBtn:"Vai allo shop",partner:"Per i
+partner",partnerText:"Vuoi costruire qualcosa insieme ad altre
+persone? Scopri l'opportunità di diventare partner.",teamBtn:"Diventa
+partner",values:"I nostri valori",valuesText:"Fiducia, onestà,
+comunità e una visione a lungo termine sono al centro del nostro
+progetto.",footerText:"Costruiamo insieme il
+futuro."},en:{tagline:"Growing together. Discovering new
 opportunities.",welcome:"Welcome to Global Vision",intro:"Discover new
 perspectives on wellbeing, personal development and growing
-together.",options:"Your opportunities",customer:"For
-customers",customerText:"Explore the product range and shop
-conveniently through the official online store.",shopBtn:"Visit the
-shop",partner:"For team partners",partnerText:"Would you like to build
-something together with others? Learn more about the team partnership
+together.",customer:"For customers",customerText:"Explore the product
+range and shop conveniently through the official online
+store.",shopBtn:"Visit the shop",partner:"For team
+partners",partnerText:"Would you like to build something together with
+others? Learn more about the team partnership
 opportunity.",teamBtn:"Become a partner",values:"Our
 values",valuesText:"Trust, honesty, community and a long-term
 perspective are at the heart of our vision.",footerText:"Building the
-future together."}
-};
-function setLang(lang,button){
-document.documentElement.lang=lang;
-Object.entries(translations[lang]).forEach(([id,value])=>{document.getElementById(id).textContent=value});
-document.querySelectorAll("nav
-button").forEach(b=>b.classList.remove("active"));
-button.classList.add("active");
-}
-</script>
-</body>
-</html>
+future together."}};function
+setLang(lang){document.documentElement.lang=lang;Object.entries(translations[lang]).forEach(([id,value])=>{document.getElementById(id).textContent=value});}</script></body></html>
