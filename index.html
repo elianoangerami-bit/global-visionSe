@@ -1,2 +1,138 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Global Vision</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:white;color:#164b46}header{text-align:center;padding:30px 15px;background:linear-gradient(135deg,#fff,#e5eeee,#fff);border-bottom:3px solid #d4af37}h1{font-size:clamp(29px,5vw,38px);letter-spacing:4px;color:#a88725}nav button{padding:10px 18px;margin:5px;border:1px solid #d4af37;border-radius:25px;background:white;color:#164b46;cursor:pointer}nav button.active{background:#164b46;color:white}.hero{text-align:center;padding:75px 20px;background:linear-gradient(135deg,#e5f5ff,#e0fff4,#fff9db)}.hero h2{font-size:clamp(28px,5vw,36px);color:#175e72}.hero p{max-width:650px;margin:20px auto;font-size:19px;line-height:1.7}.actions,.values{display:flex;justify-content:center;flex-wrap:wrap;gap:20px}.btn{padding:17px 28px;border-radius:30px;text-decoration:none;font-weight:bold;box-shadow:0 5px 15px #00000015}.customer{background:linear-gradient(135deg,#ffe69a,#d4af37);color:#253b35}.partner{background:linear-gradient(135deg,#008c83,#185a91);color:white}section{text-align:center;padding:50px 20px}.card{width:280px;padding:25px;border:1px solid silver;border-top:4px solid #d4af37;border-radius:18px}.card h3{color:#008c83}footer{text-align:center;padding:30px;background:#164b46;color:white;border-top:3px solid #d4af37}</style></head><body><header><h1>GLOBAL VISION</h1><p>ONE WORLD · ONE VISION</p><nav><button id="de" onclick="setLang('de')">Deutsch</button><button id="it" onclick="setLang('it')">Italiano</button><button id="en" onclick="setLang('en')">English</button></nav></header><main><div class="hero"><h2 id="headline"></h2><p id="intro"></p><div class="actions"><a class="btn customer" id="customer" href="https://www.fitline.com/?sponsor=22457396" target="_blank" rel="noopener noreferrer"></a><a class="btn partner" id="partner" href="https://registration.pm-international.com/?TP=22457396" target="_blank" rel="noopener noreferrer"></a></div></div><section><h2 id="valuesTitle"></h2><div class="values"><div class="card"><h3 id="v1"></h3><p id="p1"></p></div><div class="card"><h3 id="v2"></h3><p id="p2"></p></div><div class="card"><h3 id="v3"></h3><p id="p3"></p></div></div></section></main><footer><h3>GLOBAL VISION</h3><p>ONE WORLD · ONE VISION</p><p id="disclosure"></p><p>© 2026 Global Vision</p></footer><script>
-const translations={de:{headline:'Gemeinsam Zukunft gestalten',intro:'Entdecke neue Möglichkeiten, persönliche Entwicklung und eine Gemeinschaft mit gemeinsamen Werten.',customer:'Produkte entdecken',partner:'Teampartner werden',valuesTitle:'Unsere Werte',v1:'Vertrauen',p1:'Ehrlichkeit und Transparenz als Fundament.',v2:'Gemeinschaft',p2:'Gemeinsam wachsen und einander unterstützen.',v3:'Vision',p3:'Neue Möglichkeiten für eine nachhaltige Zukunft.',disclosure:'Unabhängiger Vertriebspartner. Bei Käufen über Partnerlinks kann ich eine Provision erhalten.'},it:{headline:'Costruiamo il futuro insieme',intro:'Scopri nuove opportunità, crescita personale e una comunità con valori condivisi.',customer:'Scopri i prodotti',partner:'Diventa partner',valuesTitle:'I nostri valori',v1:'Fiducia',p1:'Onestà e trasparenza come fondamenta.',v2:'Comunità',p2:'Crescere insieme e sostenersi a vicenda.',v3:'Visione',p3:'Nuove opportunità per un futuro sostenibile.',disclosure:'Partner commerciale indipendente. Potrei ricevere una commissione per gli acquisti tramite i link partner.'},en:{headline:'Building the future together',intro:'Discover new opportunities, personal growth and a community with shared values.',customer:'Discover products',partner:'Become a team partner',valuesTitle:'Our values',v1:'Trust',p1:'Honesty and transparency as our foundation.',v2:'Community',p2:'Growing together and supporting each other.',v3:'Vision',p3:'New opportunities for a sustainable future.',disclosure:'Independent distributor. I may receive a commission from purchases made through partner links.'}};function setLang(lang){document.documentElement.lang=lang;Object.entries(translations[lang]).forEach(([key,value])=>document.getElementById(key).textContent=value);document.querySelectorAll('nav button').forEach(button=>button.classList.toggle('active',button.id===lang));}setLang('de');</script></body></html>
+HTML
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Vision</title>
+<style>
+* {box-sizing:border-box}
+body {
+ margin:0;
+ font-family:Arial,sans-serif;
+ color:#123b46;
+ background:linear-gradient(135deg,#ffffff,#e1fff2,#e4f4ff,#e5e7eb);
+ min-height:100vh;
+ text-align:center;
+}
+header {
+ padding:30px 15px;
+ background:white;
+ border-bottom:3px solid #d4af37;
+}
+.logo {
+ font-size:38px;
+ font-weight:bold;
+ letter-spacing:4px;
+ color:#b18b26;
+}
+nav button {
+ background:white;
+ color:#174e65;
+ border:1px solid #d4af37;
+ padding:10px 18px;
+ margin:5px;
+ border-radius:20px;
+ cursor:pointer;
+}
+main {
+ max-width:850px;
+ margin:auto;
+ padding:65px 20px;
+}
+h1 {
+ font-size:clamp(32px,6vw,56px);
+ color:#075b70;
+}
+p {
+ font-size:19px;
+ line-height:1.7;
+}
+.button {
+ display:block;
+ max-width:350px;
+ margin:20px auto;
+ padding:20px;
+ border-radius:30px;
+ text-decoration:none;
+ font-weight:bold;
+ box-shadow:0 5px 20px #0002;
+}
+.customer {
+ background:linear-gradient(120deg,#087c50,#008c95);
+ color:white;
+}
+.partner {
+ background:linear-gradient(120deg,#d4af37,#fff0a0,#c0c0c0);
+ color:#173c43;
+}
+footer {
+ padding:30px 15px;
+ border-top:1px solid #d4af37;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">GLOBAL VISION</div>
+<p>VISION • TRUST • GROWTH</p>
+<nav>
+<button onclick="setLang('de')">DE</button>
+<button onclick="setLang('it')">IT</button>
+<button onclick="setLang('en')">EN</button>
+</nav>
+</header>
+<main>
+<h1 id="headline">Gemeinsam Zukunft gestalten</h1>
+<p id="intro">Entdecke neue Möglichkeiten, persönliche Entwicklung und eine Gemeinschaft, die auf Vertrauen und Zusammenhalt basiert.</p>
+<a class="button customer" id="customer" href="https://www.fitline.com/?sponsor=22457396" target="_blank" rel="noopener">Produkte entdecken</a>
+<a class="button partner" id="partner" href="https://registration.pm-international.com/?TP=22457396" target="_blank" rel="noopener">Teampartner werden</a>
+<h2 id="vision">Unsere Vision</h2>
+<p id="mission">Gemeinsam wachsen. Ehrlich handeln. Nachhaltige Beziehungen aufbauen.</p>
+<p id="disclosure">Als unabhängiger Vertriebspartner kann ich eine Provision erhalten.</p>
+</main>
+<footer>
+GLOBAL VISION © 2026
+<br><br>
+Soli Deo Gloria
+</footer>
+<script>
+const translations = {
+ de:{
+ headline:"Gemeinsam Zukunft gestalten",
+ intro:"Entdecke neue Möglichkeiten, persönliche Entwicklung und eine Gemeinschaft, die auf Vertrauen und Zusammenhalt basiert.",
+ customer:"Produkte entdecken",
+ partner:"Teampartner werden",
+ vision:"Unsere Vision",
+ mission:"Gemeinsam wachsen. Ehrlich handeln. Nachhaltige Beziehungen aufbauen.",
+ disclosure:"Als unabhängiger Vertriebspartner kann ich eine Provision erhalten."
+ },
+ it:{
+ headline:"Costruiamo insieme il futuro",
+ intro:"Scopri nuove opportunità, crescita personale e una comunità basata sulla fiducia e sulla collaborazione.",
+ customer:"Scopri i prodotti",
+ partner:"Diventa partner",
+ vision:"La nostra visione",
+ mission:"Crescere insieme. Agire con onestà. Costruire relazioni durature.",
+ disclosure:"Come distributore indipendente posso ricevere una commissione."
+ },
+ en:{
+ headline:"Shaping the future together",
+ intro:"Discover new opportunities, personal growth and a community built on trust and cooperation.",
+ customer:"Discover products",
+ partner:"Become a team partner",
+ vision:"Our vision",
+ mission:"Grow together. Act honestly. Build lasting relationships.",
+ disclosure:"As an independent distributor, I may receive a commission."
+ }
+};
+function setLang(lang){
+ document.documentElement.lang=lang;
+ Object.keys(translations[lang]).forEach(key=>{
+ document.getElementById(key).textContent=translations[lang][key];
+ });
+}
+</script>
+</body>
+</html>
